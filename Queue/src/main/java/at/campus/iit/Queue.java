@@ -1,6 +1,15 @@
 package at.campus.iit;
 
 public interface Queue {
+
+	/**
+	 * The interface Queue consists of all required methods which are necessary for the data structure Queue.
+	 *
+	 * @author	Mathias Gsell
+	 * @author  Daniel Lamprecht
+	 * @version 1.0
+	 * @since	04.06.2019
+	 */
 	
 	/**
 	 *  Adds the element obj to the queue. 
