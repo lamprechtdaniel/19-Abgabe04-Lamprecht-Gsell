@@ -43,7 +43,9 @@ Die zuvor erwähnte Dokumentation wird in den folgenden Bildern dargestellt.
      - Hinzufügen an richtiger Stelle
      - TODO
 
-    - Es wurde ein Line-Coverage von 100% erreicht. Dies stellt den Idealfall dar, und muss/kann aber nicht zwingend immer erreicht werden. Das anschließende Bild stellt den Report zum Test dar.
+    - Es wurde ein Line-Coverage von 100% erreicht. Dies stellt den Idealfall dar, und muss/kann aber nicht zwingend immer erreicht werden. Die anschließenden Bilder stellen den Report zum Test dar.
+![Bild Surefire Report Teil 1](./media/surefirereport1.png)
+![Bild Surefire Report Teil 2](./media/surefirereport2.png)
 
 ## Links/Literatur
 ---
@@ -70,10 +72,10 @@ configuration-management/tree/master/test-automation/Queue
 - [x] Erstellen Sie für Klasse und alle Methoden Kommentare um mittels Javadoc eine API Dokumentation zu erzeugen
   - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report
 
-- [ ] Erstellung JUnit Tests (vollständig testen, mehrere Varianten)
+- [x] Erstellung JUnit Tests (vollständig testen, mehrere Varianten)
   - [x] Sie werden die „selben“ Testfälle mehrfach erstellen müssen um „mehrere Variationen“ für einen möglichst vollständigen Test zu erreichen. Achten Sie dabei mit unterschiedlichen Daten zu testen.
   - [x] JavaDoc Kommentare erstellen.
-  - [] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
+  - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
 
 - [ ] Passen Sie Ihr pom.xml auf das Projekt an, damit Sie das Projekt erstellen aber auch Dokumentation generieren können.
   - [ ] EntwicklerInnen Informationen hinzufügen.
