@@ -8,7 +8,7 @@ Mathias Gsell
 
 Repository: https://github.com/lamprechtdaniel/19-Abgabe04-Lamprecht-Gsell
 
-***
+---
 ## Vorgehen
 ---
 1. Zu Beginn wurde das Repository erstellt sowie das Queue-Beispiel eingebunden
@@ -33,24 +33,65 @@ Die zuvor erwähnte Dokumentation wird in den folgenden Bildern dargestellt.
    - Klasse StringQueue
 ![Bild JavaDoc Class StringQueue](./media/javadoc_stringqueue_class_general.png)
 ![Bild JavaDoc Class StringQueue Spezifisch](./media/javadoc_stringqueue_class_specific.png)
-
    
-1. Dann wurden JUnit-Testfälle erstellt, um das den Code automatisiert zu testen.
-   - Tests wurden für folgende Fälle Tests erstellt
+7. Dann wurden JUnit-Testfälle erstellt, um das den Code automatisiert zu testen.
+   - Tests wurden für vor Allem folgende Fälle Tests erstellt
      - Hinzufügen zu Queue wenn Queue bereits voll ist
      - Entfernen von Queue wenn Queue bereits leer ist
      - Entfernen des richtigen Elements
      - Hinzufügen an richtiger Stelle
-     - TODO
-
     - Es wurde ein Line-Coverage von 100% erreicht. Dies stellt den Idealfall dar, und muss/kann aber nicht zwingend immer erreicht werden. Die anschließenden Bilder stellen den Report zum Test dar.
 ![Bild Surefire Report Teil 1](./media/surefirereport1.png)
 ![Bild Surefire Report Teil 2](./media/surefirereport2.png)
 
+8. Im nächsten Schritt wird das pom.xml auf das Projekt angepasst, damit dieses sowohl erstellt werden kann als auch die Dokumentation erstellt werden kann. Es wurden Entwicklerinformationen hinzugefügt und Informationen für die Logging-Bibliothek hinzugefügt.
+
+9. Anschließend wurde Log4j integriert und in jeder Methode verwendet, so dass mitgeloggt wird was gerade passiert. Grundsätzlich wird eine Instanz des Loggers erstellt und in jeder Methode diese verwendet um den aktuellen Zustand festzuhalten/zu dokumentieren.
+
+    Das erstellen des Loggers wird in folgendem Screenshot dargestellt:
+![Bild Log4j Initialisierung](./media/log4j_init.jpg)
+
+    In einer Funktion wird es folgendermaßen aufgerufen:
+![Bild Log4j Aufruf](./media/log4j_call.jpg)
+
+    Die Ausgabe sieht folgendermaßen aus:
+![Bild Log4j Ausgabe](./media/log4j_output.jpg)
+
+10. Maven Site
+TODO
+
+11. Python/Java Code mit GitHub Flavor
+> **Java Code**
+> ```java
+>   int count = 0;
+>   if (count!=0)
+>       System.out.println("Count is not equal to 0!")
+>   else
+>       System.out.println("Count is equal to 0!")
+>```
+
+> **Phyton Code**
+>```python
+>   #!/usr/bin/python
+>   count=0
+>   if count!=0:
+>       print("Count is not equal to 0!")
+>   else:
+>       print("Count is equal to 0!")
+>```
+
+
 ## Links/Literatur
 ---
+- [Dokumentation Maven Site Plugin](https://maven.apache.org/plugins/maven-site-plugin/)
+- [How To Write JavaDoc](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html)
+- [Collections JavaDoc Example](http://www.docjar.net/html/api/java/util/Collections.java.html)
+- [Online Markdown Editor](https://dillinger.io/)
+- [GitHub Flavored Markdown](https://github.github.com/gfm/)
+- [Github Flavored Markdown Code](http://www.rubycoloredglasses.com/2013/04/languages-supported-by-github-flavored-markdown/)
+- [Apache log4j](https://logging.apache.org/log4j/2.x/maven-artifacts.html)
+- [Log4j2 Beispiel](https://kodehelp.com/log4j2-configuration-file-examples/)
 - Vorlesungsfolien
-- Links der Angabe
 
 
 # Taskliste Lamprecht/Gsell
@@ -78,17 +119,17 @@ configuration-management/tree/master/test-automation/Queue
   - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
 
 - [ ] Passen Sie Ihr pom.xml auf das Projekt an, damit Sie das Projekt erstellen aber auch Dokumentation generieren können.
-  - [ ] EntwicklerInnen Informationen hinzufügen.
-  - [ ] Integration Logging Bibliothek log4j mittels Maven Dependencies.
+  - [x] EntwicklerInnen Informationen hinzufügen.
+  - [x] Integration Logging Bibliothek log4j mittels Maven Dependencies.
 
 
-- [ ] Log4j (Version 2) integrieren und in jeder Methode ins Log schreiben
-  - [ ] Siehe aktualisiertes Stack Beispiel.
-  - [ ] Erstellen Sie einen Statischen Logger der auf die Konsole schreibt.
-  - [ ] Konfigurieren Sie Logger über ein properties File.
-  - [ ] Geben Sie eine Info Lognachricht bei Aufruf einer jeden Methode aus.
-  - [ ] Geben Sie eine Error Lognachricht aus bevor Sie einen Fehler werfen.
-  - [ ] Ergebnisse (Konsolenausgabe) als Bild in Dokumentation einfließen lassen.
+- [x] Log4j (Version 2) integrieren und in jeder Methode ins Log schreiben
+  - [x] Siehe aktualisiertes Stack Beispiel.
+  - [x] Erstellen Sie einen Statischen Logger der auf die Konsole schreibt.
+  - [x] Konfigurieren Sie Logger über ein properties File.
+  - [x] Geben Sie eine Info Lognachricht bei Aufruf einer jeden Methode aus.
+  - [x] Geben Sie eine Error Lognachricht aus bevor Sie einen Fehler werfen.
+  - [x] Ergebnisse (Konsolenausgabe) als Bild in Dokumentation einfließen lassen.
 
 - [ ] Maven Site Dokumentation erstellen
   - [ ] Inklusive Javadoc Code und Javadoc Test Klassen
@@ -100,8 +141,7 @@ configuration-management/tree/master/test-automation/Queue
 - [ ] Erstellung detaillierter und nachvollziehbarer Markdown Lab Report
   - [x] Übertragung Information aus Labreport Template.
   - [ ] Alle Schritte dieser Übung nachvollziehbar erläutern.
-  - [ ] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument, welcher 3
-Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
+  - [x] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
   - [ ] Korrekturlesen Dokumentation
   - [ ] PDF erstellen (zB Dillinger)
 
