@@ -22,6 +22,8 @@ import org.apache.logging.log4j.LogManager;
  * @see		java.util.ArrayList
  * @see		java.util.List
  * @see    	java.util.NoSuchElementException
+ * @see		org.apache.logging.log4j.Logger
+ * @see		org.apache.logging.log4j.LogManager
  */
 
 public class StringQueue implements Queue {
@@ -36,7 +38,7 @@ public class StringQueue implements Queue {
 	 * @since 1.0
 	 */
 	public StringQueue() //Optimization: add empty Contructor to keep maxSize = 5
-	{  logger.info("default constructor");
+	{  logger.info("Method: default constructor");
 	}
 
 	/**
@@ -46,7 +48,7 @@ public class StringQueue implements Queue {
 	 */
 	public StringQueue(int maxSize){ //Error: maxsize --> maxSize
 		this.maxSize = maxSize; //Optimization: maxSize --> this.maxSize
-		logger.info("constructor with maxSize "+maxSize);
+		logger.info("Method: constructor with maxSize "+maxSize);
 	}
 
 	/**
@@ -58,7 +60,7 @@ public class StringQueue implements Queue {
 	 */
 	@Override
 	public boolean offer(String obj) {
-		logger.info("offer "+obj);
+		logger.info("Method: offer("+obj+")");
 		if(elements.size()!= maxSize)
 		{
 			elements.add(obj);
@@ -80,7 +82,7 @@ public class StringQueue implements Queue {
 	 */
 	@Override
 	public String poll() {
-		logger.info("poll");
+		logger.info("Method: poll()");
 
 		String element = peek();
 		logger.info("return peek "+element);
@@ -102,6 +104,7 @@ public class StringQueue implements Queue {
 	 */
 	@Override
 	public String remove() {
+		logger.info("Method: remove()");
 		String element = poll();
 		//Error: element = "" --> deleted
 		if(element == null)
@@ -120,6 +123,7 @@ public class StringQueue implements Queue {
 	 */
 	@Override
 	public String peek() {
+		logger.info("Method: peek()");
 		String element;
 		if(elements.size() > 0)
 		{
@@ -144,6 +148,7 @@ public class StringQueue implements Queue {
 
 	@Override
 	public String element() {
+		logger.info("Method: element()");
 		String element = peek();
 		if(element == null)
 		{
@@ -153,6 +158,7 @@ public class StringQueue implements Queue {
 		
 		return element;
 	}
+
 
 	/*
 	public static void main(String[] args) {
@@ -176,10 +182,6 @@ public class StringQueue implements Queue {
 		System.out.println(queue.peek());
 		//System.out.println(queue.remove());
 		//System.out.println(queue.element());
-
-
-
-
-	} */
+	}*/
 
 }
