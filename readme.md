@@ -1,5 +1,5 @@
 # Taskliste Lamprecht/Gsell
-[ ] Übertragen Angabe Taskliste in Markdown Readme
+- [ ] Übertragen Angabe Taskliste in Markdown Readme
 
 [ ] Einspielen Queue Vorlage aus Repository: https://github.com/michaelulm/software-
 configuration-management/tree/master/test-automation/Queue
