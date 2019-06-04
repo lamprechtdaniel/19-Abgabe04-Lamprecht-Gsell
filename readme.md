@@ -14,9 +14,15 @@ Repository: https://github.com/lamprechtdaniel/19-Abgabe04-Lamprecht-Gsell
 1. Zu Beginn wurde das Repository erstellt sowie das Queue-Beispiel eingebunden
 2. Das File readme.md wurde erstellt und mit den Tasks mit Github-Flavor erweitert
 3. Anschließend wurde der Labreport im Readme.md hinzugefügt (die Tasklist befindet sich nun am Ende des Readme.md File)
-4. Das Queue-Beispiel wurde gedebuggt, es wurden die Fehler gefunden sowie ausgebessert. Ebenso wurde der Code optimiert. Die ausgebesserten Stellen wurden kommentiert.
-    - folgende Fehler wurden gefunden
-    1. [! alt text]()
+4. Das Queue-Beispiel wurde gedebuggt, es wurden die Fehler gefunden sowie ausgebessert. Ebenso wurde der Code optimiert. Die ausgebesserten Stellen wurden kommentiert. Folgende Fehler wurden gefunden:
+    - ![Bild Bug1.1](./media/bug1.1_constructor.jpg)
+    Hier wurde die Variabel maxsize im Konstruktor zu "maxSize" geändert. Ebenso wurde auf die Membervariable mit this. zugegriffen, um Missverständnisse zu vermeiden.
+    - [Bild Bug1.2](./media/bug1.2_defaultConstructor.jpg)
+    Ebenso wurde hier ein Default-Konstruktor hinzugefügt, um die maxSize von 5 zu behalten.
+    - ![Bild Bug2](./media/bug2_pollElementSize.jpg)
+    In de if-Anweisung wurde "element.size()==0" zu "element.size()>0" ausgebessert. Dies hat den Grund, dass nur ein Element entfernt werden kann, wenn mindestens eines in der Queue vorhanden ist.
+    - ![Bild Bug3](./media/bug3_uselessDeclaration.jpg)
+    Die Zeile "element = "" wurde entfernt, da ansonsten das Entfernte Element (welches in element sein sollte) überschrieben wird.
 5. Die ausgebesserte Version des Queue-Beispiels wurde auf das Repository gepushed.
 6. Anschließend werden die Kommentare für das Javadoc im Projekt erstellt
 7. Dann wurden JUnit-Testfälle erstellt, um das den Code automatisiert zu testen.
