@@ -31,9 +31,8 @@ public class StringQueueTest {
     }
 
     /**
-     * test adding five elements to queue,
-     * if queue is not full return value is true,
-     * if queue is full return value is false
+     * tests method peak() without any element in queue.
+     * @result is null
      */
     @Test
     public void testPeek() {
@@ -41,9 +40,9 @@ public class StringQueueTest {
     }
 
     /**
-     * test adding five elements to queue,
-     * if queue is not full return value is true,
-     * if queue is full return value is false
+     * test adding four elements to queue, three successfully,
+     * return value is false.
+     * @result false, too many elements added
      */
     @Test
     public void testOffer1() {
@@ -53,9 +52,9 @@ public class StringQueueTest {
         assertFalse(stringQueue.offer("fourth"));
     }
     /**
-     * test adding five elements to queue,
-     * if queue is not full return value is true,
-     * if queue is full return value is false
+     * test adding five elements to queue, three successfully,
+     * return value is false.
+     * @result false, too many elements added
      */
     @Test
     public void testOffer2() {
@@ -68,6 +67,7 @@ public class StringQueueTest {
     /**
      * test adding one element with offer()
      * and get it with peek()
+     * @result Is equals, only element what was offered.
      */
     @Test
     public void testOfferAndPeek1() {
@@ -75,8 +75,9 @@ public class StringQueueTest {
         assertEquals("first", stringQueue.peek());
     }
     /**
-     * test adding four elements, four successfully, with offer()
+     * test adding four elements with offer(), three successfully,
      * and get it with peek()
+     * @result Is equals, first element what was added to queue.
      */
     @Test
     public void testOfferAndPeek2() {
@@ -89,7 +90,8 @@ public class StringQueueTest {
 
     /**
      * test adding one element with offer()
-     * and remove&get it with poll()
+     * and remove/get it with poll().
+     * @result Is equals, only element what was offered.
      */
     @Test
     public void testOfferAndPoll1() {
@@ -98,8 +100,9 @@ public class StringQueueTest {
     }
 
     /**
-     * test adding four elements, three sucessfully,  with offer()
-     * and remove/get it with poll()
+     * test adding four elements with offer(), three successfully,
+     * and remove/get four with poll().
+     * @result null, all elements were removed before.
      */
     @Test
     public void testOfferAndPoll2() {
@@ -118,58 +121,45 @@ public class StringQueueTest {
      * test adding one element with method offer()
      * and remove/get it with method remove().
      * With removing a second element, NoSuchElementException has to be thrown.
+     * @result Is equal, only one element added.
      */
     @Test (expected = NoSuchElementException.class)
     public void testOfferAndRemove1() {
-        assertTrue(stringQueue.offer("first"));
-        assertEquals("first", stringQueue.remove());
-        stringQueue.remove();
-    }
-    /**
-     * test adding four elements, three sucessfully, with method offer()
-     * and remove/get it with method remove().
-     * With removing a fourth element, NoSuchElementException has to be thrown.
-     */
-    @Test (expected = NoSuchElementException.class)
-    public void testOfferAndRemove2() {
         stringQueue.offer("first");
-        stringQueue.offer("second");
-        stringQueue.offer("third");
-        stringQueue.offer("fourth");
-
         assertEquals("first", stringQueue.remove());
-        assertEquals("second", stringQueue.remove());
-        assertEquals("third", stringQueue.remove());
         stringQueue.remove();
     }
 
     /**
      * test adding one element with method offer()
      * and get it with method element().
+     * @result Is equal, only one element added.
      */
     @Test
     public void testOfferAndElement1() {
-        assertEquals(true, stringQueue.offer("first"));
+        assertTrue( stringQueue.offer("first"));
         assertEquals("first", stringQueue.element());
     }
 
     /**
      * test adding four elements, three successfully, with method offer()
      * and get it twice with method element().
+     * @result Is equal, first element what was added is "first".
      */
     @Test
     public void testOfferAndElement2() {
-        stringQueue.offer("first");
-        stringQueue.offer("second");
-        stringQueue.offer("third");
-        stringQueue.offer("fourth");
-        assertEquals("first", stringQueue.element());
-        assertEquals("first", stringQueue.element());
+        stringQueue.offer("1");
+        stringQueue.offer("3");
+        stringQueue.offer("2");
+        stringQueue.offer("4");
+        assertEquals("1", stringQueue.element());
+        assertEquals("1", stringQueue.element());
     }
 
     /**
      * test getting element in empty queue with method element(),
      * NoSuchElementException has to be thrown.
+     * @result NoSuchElementException will be thrown.
      */
     @Test (expected = NoSuchElementException.class)
     public void testElement1() {
@@ -177,8 +167,8 @@ public class StringQueueTest {
     }
 
     /**
-     * test getting element in empty queue with method element(),
-     * NoSuchElementException has to be thrown.
+     * test adding four elements and getting the first with method element().
+     * @result NoSuchElementException will be thrown.
      */
     @Test
     public void testOfferAndElement() {
@@ -192,6 +182,7 @@ public class StringQueueTest {
     /**
      * test getting element in empty queue with method element(),
      * NoSuchElementException has to be thrown.
+     * @result Is equal, same error message.
      */
     @Test
     public void testErrorMessageRemove() {
@@ -207,6 +198,7 @@ public class StringQueueTest {
     /**
      * test getting element in empty queue with method element(),
      * NoSuchElementException has to be thrown.
+     * @result Is equal, same error message.
      */
     @Test
     public void testErrorMessageElement() {
@@ -222,6 +214,7 @@ public class StringQueueTest {
     /**
      * test getting element in empty queue with method element(),
      * NoSuchElementException has to be thrown.
+     * @result NoSuchElementException will be thrown.
      */
     @Test(expected = NoSuchElementException.class)
     public void testOfferNull() {
