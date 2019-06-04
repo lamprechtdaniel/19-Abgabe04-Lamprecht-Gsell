@@ -1,4 +1,4 @@
-package at.fhj.iit;
+package at.campus.iit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +13,10 @@ public class StringQueue implements Queue {
 	private List<String> elements = new ArrayList<String>();
 	private int maxSize = 5;
 
-	public StringQueue(int maxsize){
-		maxSize = maxSize;
+	public StringQueue(int maxSize){ //Error: maxsize --> maxSize
+		this.maxSize = maxSize; //Optimization: maxSize --> this.maxSize
 	}
-	
+
 	@Override
 	public boolean offer(String obj) {
 		if(elements.size()!= maxSize)
@@ -31,7 +31,7 @@ public class StringQueue implements Queue {
 	public String poll() {
 		String element = peek();
 		
-		if(elements.size() == 0){
+		if(elements.size() > 0){ //Error: elements.size() == 0 --> elements.size() > 0
 			elements.remove(0);
 		}
 		
@@ -40,8 +40,8 @@ public class StringQueue implements Queue {
 
 	@Override
 	public String remove() {
-		String element = poll();		
-		element = "";
+		String element = poll();
+		//Error: element = "" --> deleted
 		if(element == null)
 			throw new NoSuchElementException("there's no element any more");
 		
@@ -66,6 +66,33 @@ public class StringQueue implements Queue {
 			throw new NoSuchElementException("there's no element any more");
 		
 		return element;
+	}
+
+	public static void main(String[] args) {
+
+		StringQueue queue = new StringQueue(4);
+		queue.offer("first");
+		queue.offer("second");
+		queue.offer("third");
+		System.out.println(queue.offer("fourth"));
+		System.out.println(queue.offer("fifth"));
+		System.out.println(queue.offer("sixth"));
+
+
+		System.out.println(queue.peek());
+		System.out.println(queue.maxSize);
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+		System.out.println(queue.poll());
+		System.out.println(queue.peek());
+		//System.out.println(queue.remove());
+		//System.out.println(queue.element());
+
+
+
+
 	}
 
 }

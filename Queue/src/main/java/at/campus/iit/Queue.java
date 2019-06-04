@@ -1,4 +1,4 @@
-package at.fhj.iit;
+package at.campus.iit;
 
 public interface Queue {
 	
