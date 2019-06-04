@@ -3,6 +3,8 @@ package at.campus.iit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * The java class StringQueue, what implements the Interface Queue, should represent
@@ -23,7 +25,8 @@ import java.util.NoSuchElementException;
  */
 
 public class StringQueue implements Queue {
-	
+
+	private static final Logger logger = LogManager.getLogger(StringQueue.class);
 	private List<String> elements = new ArrayList<String>();
 	private int maxSize = 5;
 
@@ -33,7 +36,8 @@ public class StringQueue implements Queue {
 	 * @since 1.0
 	 */
 	public StringQueue() //Optimization: add empty Contructor to keep maxSize = 5
-	{ }
+	{  logger.info("default constructor");
+	}
 
 	/**
 	 * Constructor with the maxSize of the Queue as parameter.
@@ -42,6 +46,7 @@ public class StringQueue implements Queue {
 	 */
 	public StringQueue(int maxSize){ //Error: maxsize --> maxSize
 		this.maxSize = maxSize; //Optimization: maxSize --> this.maxSize
+		logger.info("constructor with maxSize "+maxSize);
 	}
 
 	/**
@@ -53,10 +58,17 @@ public class StringQueue implements Queue {
 	 */
 	@Override
 	public boolean offer(String obj) {
+		logger.info("offer "+obj);
 		if(elements.size()!= maxSize)
+		{
 			elements.add(obj);
+			logger.info("element "+obj+" added");
+		}
 		else
+		{
+			logger.info("element "+obj+" can not be added, queue is full");
 			return false;
+		}
 		
 		return true;
 	}
@@ -68,10 +80,14 @@ public class StringQueue implements Queue {
 	 */
 	@Override
 	public String poll() {
+		logger.info("poll");
+
 		String element = peek();
+		logger.info("return peek "+element);
 		
 		if(elements.size() > 0){ //Error: elements.size() == 0 --> elements.size() > 0
 			elements.remove(0);
+			logger.info("element removed from queue");
 		}
 		
 		return element;
@@ -89,8 +105,10 @@ public class StringQueue implements Queue {
 		String element = poll();
 		//Error: element = "" --> deleted
 		if(element == null)
+		{
+			logger.info("throw NoSuchElementException");
 			throw new NoSuchElementException("there's no element any more");
-		
+		}
 		return element;
 	}
 
@@ -104,9 +122,15 @@ public class StringQueue implements Queue {
 	public String peek() {
 		String element;
 		if(elements.size() > 0)
+		{
 			element = elements.get(0);
+			logger.info("return peek "+element);
+		}
 		else
+		{
+			logger.info("queue is empty, return null");
 			element = null;
+		}
 		
 		return element;
 	}
@@ -122,7 +146,10 @@ public class StringQueue implements Queue {
 	public String element() {
 		String element = peek();
 		if(element == null)
+		{
+			logger.info("throw NoSuchElementException");
 			throw new NoSuchElementException("there's no element any more");
+		}
 		
 		return element;
 	}
