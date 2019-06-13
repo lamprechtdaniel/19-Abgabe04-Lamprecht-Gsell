@@ -58,7 +58,7 @@ Die zuvor erwähnte Dokumentation wird in den folgenden Bildern dargestellt.
 ![Bild Log4j Ausgabe](./media/log4j_output.jpg)
 
 10. Maven Site
-TODO
+Maven Site dient dazu die generierten Files darzustellen. Ein Bestandteil davon sind sowohl die JUnit-Test als auch das JavaDoc. Ebenso kann auch eine Seite (wie ebenso gefordert) manuell erstellt werden.
 
 11. Python/Java Code mit GitHub Flavor
 > **Java Code**
@@ -70,7 +70,7 @@ TODO
 >       System.out.println("Count is equal to 0!")
 >```
 
-> **Phyton Code**
+> **Python Code**
 >```python
 >   #!/usr/bin/python
 >   count=0
