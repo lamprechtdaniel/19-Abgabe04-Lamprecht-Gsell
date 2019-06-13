@@ -38,7 +38,8 @@ public class StringQueue implements Queue {
 	 * @since 1.0
 	 */
 	public StringQueue() //Optimization: add empty Contructor to keep maxSize = 5
-	{  logger.info("Method: default constructor");
+	{
+		logger.info("Method: default constructor");
 	}
 
 	/**
@@ -160,28 +161,19 @@ public class StringQueue implements Queue {
 	}
 
 
-	/*
+
 	public static void main(String[] args) {
 
 		StringQueue queue = new StringQueue(4);
 		queue.offer("first");
 		queue.offer("second");
 		queue.offer("third");
-		System.out.println(queue.offer("fourth"));
-		System.out.println(queue.offer("fifth"));
-		System.out.println(queue.offer("sixth"));
-
-
-		System.out.println(queue.peek());
-		System.out.println(queue.maxSize);
-		System.out.println(queue.poll());
-		System.out.println(queue.poll());
-		System.out.println(queue.poll());
-		System.out.println(queue.poll());
-		System.out.println(queue.poll());
-		System.out.println(queue.peek());
+		queue.poll();
+		queue.remove();
+		queue.remove();
+		queue.remove();
 		//System.out.println(queue.remove());
 		//System.out.println(queue.element());
-	}*/
+	}
 
 }
