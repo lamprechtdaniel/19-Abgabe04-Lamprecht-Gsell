@@ -60,7 +60,14 @@ Die zuvor erwähnte Dokumentation wird in den folgenden Bildern dargestellt.
 10. Maven Site
 Maven Site dient dazu die generierten Files darzustellen. Ein Bestandteil davon sind sowohl die JUnit-Test als auch das JavaDoc. Ebenso kann auch eine Seite (wie ebenso gefordert) manuell erstellt werden.
 
-11. Python/Java Code mit GitHub Flavor
+Die erstellte Site ist in den folgenden Screenshots ersichtlich
+
+![Bild MavenSite Index.html](./media/mvnsite_index.png)
+![Bild MavenSite Queue](./media/mvnsite_queuedescription.png)
+![Bild MavenSite Reports](./media/mvnsite_reports.png)
+
+
+1.  Python/Java Code mit GitHub Flavor
 > **Java Code**
 > ```java
 >   int count = 0;
@@ -101,9 +108,9 @@ Maven Site dient dazu die generierten Files darzustellen. Ein Bestandteil davon 
 - [x] Einspielen Queue Vorlage aus Repository: https://github.com/michaelulm/software-
 configuration-management/tree/master/test-automation/Queue
 
-- [ ] Taskergebnisse Schritt für Schritt auf Git stellen
-  - [ ] Führung Taskliste
-  - [ ] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledigt markiert und Testfälle inkl. geänderter Taskliste ins Repository übertragen.
+- [x] Taskergebnisse Schritt für Schritt auf Git stellen
+  - [x] Führung Taskliste
+  - [x] Veröffentlichung in Git mit aktuell durchgeführten Tätigkeiten, z.B. Testfälle geschrieben so wird auch in der Taskliste diese Aufgabe als erledigt markiert und Testfälle inkl. geänderter Taskliste ins Repository übertragen.
 
 - [x] Korrigieren Sie den Code bzw. Debuggen Sie ihn um die Fehler zu finden
   - [x] Es befinden sich gesamt 3 Fehler im Source Code.
@@ -118,7 +125,7 @@ configuration-management/tree/master/test-automation/Queue
   - [x] JavaDoc Kommentare erstellen.
   - [x] Integrieren Sie ein Bild (der generierten Dokumentation) in Ihren Report.
 
-- [ ] Passen Sie Ihr pom.xml auf das Projekt an, damit Sie das Projekt erstellen aber auch Dokumentation generieren können.
+- [x] Passen Sie Ihr pom.xml auf das Projekt an, damit Sie das Projekt erstellen aber auch Dokumentation generieren können.
   - [x] EntwicklerInnen Informationen hinzufügen.
   - [x] Integration Logging Bibliothek log4j mittels Maven Dependencies.
 
@@ -131,20 +138,20 @@ configuration-management/tree/master/test-automation/Queue
   - [x] Geben Sie eine Error Lognachricht aus bevor Sie einen Fehler werfen.
   - [x] Ergebnisse (Konsolenausgabe) als Bild in Dokumentation einfließen lassen.
 
-- [ ] Maven Site Dokumentation erstellen
-  - [ ] Inklusive Javadoc Code und Javadoc Test Klassen
-  - [ ] Inklusive Menü mit Verweis auf manuell erstellte Seite
-      - [ ] Seite erläutert Funktionsweise Queue
-  - [ ] Geben Sie ein Bild der Maven Site Dokumentation in den Lab Report
-      - [ ] Der Inhalt der manuell erstellten Seite sollte ersichtlich sein
+- [x] Maven Site Dokumentation erstellen
+  - [x] Inklusive Javadoc Code und Javadoc Test Klassen
+  - [x] Inklusive Menü mit Verweis auf manuell erstellte Seite
+      - [x] Seite erläutert Funktionsweise Queue
+  - [x] Geben Sie ein Bild der Maven Site Dokumentation in den Lab Report
+      - [x] Der Inhalt der manuell erstellten Seite sollte ersichtlich sein
 
-- [ ] Erstellung detaillierter und nachvollziehbarer Markdown Lab Report
+- [x] Erstellung detaillierter und nachvollziehbarer Markdown Lab Report
   - [x] Übertragung Information aus Labreport Template.
-  - [ ] Alle Schritte dieser Übung nachvollziehbar erläutern.
+  - [x] Alle Schritte dieser Übung nachvollziehbar erläutern.
   - [x] Übung Github Flavor: Erstellen Sie einen Codeblock im Dokument welcher 3 Zeilen Python und 3 Zeilen Java Source Code korrekt darstellt.
-  - [ ] Korrekturlesen Dokumentation
-  - [ ] PDF erstellen (zB Dillinger)
+  - [x] Korrekturlesen Dokumentation
+  - [x] PDF erstellen (zB Dillinger)
 
-- [ ] Überprüfung Vollständigkeit der Abgabe
+- [x] Überprüfung Vollständigkeit der Abgabe
 
-- [ ] Abgabe PDF Version der Abgabe
+- [x] Abgabe PDF Version der Abgabe

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="15" failures="0" name="at.campus.iit.StringQueueTest" time="0.004" errors="0" skipped="0">
+<testsuite tests="15" failures="0" name="at.campus.iit.StringQueueTest" time="1.121" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.1+13-LTS"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib"/>
     <property name="gopherProxySet" value="false"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/daniel/Google Drive/Work/FH Campus 02/Business_Software_Development/2_Semester/Konfigurationsmanagement/Übung/Exercise/05_Gesamtübung/19-Abgabe04-Lamprecht-Gsell/Queue"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/daniel/Google Drive/Work/FH Campus 02/Business_Software_Development/2_Semester/Konfigurationsmanagement/Übung/Exercise/05_Gesamtübung/2_test/19-Abgabe04-Lamprecht-Gsell/Queue"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="AT"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/daniel/Google Drive/Work/FH Campus 02/Business_Software_Development/2_Semester/Konfigurationsmanagement/Übung/Exercise/05_Gesamtübung/19-Abgabe04-Lamprecht-Gsell/Queue"/>
+    <property name="user.dir" value="/Users/daniel/Google Drive/Work/FH Campus 02/Business_Software_Development/2_Semester/Konfigurationsmanagement/Übung/Exercise/05_Gesamtübung/2_test/19-Abgabe04-Lamprecht-Gsell/Queue"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.1+13-LTS"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
@@ -45,7 +45,7 @@
     <property name="java.class.path" value="/Applications/apache-maven-3.6.0/boot/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher surefire-report:report"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher site"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home"/>
     <property name="user.language" value="de"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -64,19 +64,19 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndElement1" time="0.002"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndElement2" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testErrorMessageElement" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndElement" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferNull" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testPeek" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testErrorMessageRemove" time="0"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndElement1" time="1.086"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndElement2" time="0.004"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testErrorMessageElement" time="0.001"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndElement" time="0.004"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferNull" time="0.002"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testPeek" time="0.001"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testErrorMessageRemove" time="0.002"/>
   <testcase classname="at.campus.iit.StringQueueTest" name="testElement1" time="0.001"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndRemove1" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOffer1" time="0.001"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOffer2" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndPeek1" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndPeek2" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndPoll1" time="0"/>
-  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndPoll2" time="0"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndRemove1" time="0.003"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOffer1" time="0.002"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOffer2" time="0.002"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndPeek1" time="0.001"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndPeek2" time="0.004"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndPoll1" time="0.002"/>
+  <testcase classname="at.campus.iit.StringQueueTest" name="testOfferAndPoll2" time="0.006"/>
 </testsuite>
